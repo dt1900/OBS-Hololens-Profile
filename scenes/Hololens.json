@@ -49,8 +49,8 @@
         "sync": 0,
         "volume": 1.0
     },
-    "current_program_scene": "1. Just Hololens",
-    "current_scene": "1. Just Hololens",
+    "current_program_scene": "3. Split Screen",
+    "current_scene": "3. Split Screen",
     "current_transition": "Fade",
     "name": "Hololens",
     "quick_transitions": [
@@ -83,41 +83,47 @@
             "deinterlace_field_order": 0,
             "deinterlace_mode": 0,
             "enabled": true,
-            "filters": [
-                {
-                    "deinterlace_field_order": 0,
-                    "deinterlace_mode": 0,
-                    "enabled": true,
-                    "flags": 0,
-                    "hotkeys": {},
-                    "id": "async_delay_filter",
-                    "mixers": 0,
-                    "muted": false,
-                    "name": "Video Delay (Async)",
-                    "push-to-mute": false,
-                    "push-to-mute-delay": 0,
-                    "push-to-talk": false,
-                    "push-to-talk-delay": 0,
-                    "settings": {
-                        "delay_ms": 2000
-                    },
-                    "sync": 0,
-                    "volume": 1.0
-                }
-            ],
             "flags": 0,
-            "hotkeys": {},
-            "id": "av_capture_input",
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.hide_scene_item.Hololens MRC": [],
+                "libobs.show_scene_item.Hololens MRC": []
+            },
+            "id": "scene",
             "mixers": 0,
             "muted": false,
-            "name": "c920",
+            "name": "1. Just Hololens",
             "push-to-mute": false,
             "push-to-mute-delay": 0,
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "settings": {
-                "device": "0x40120000046d082d",
-                "device_name": "HD Pro Webcam C920"
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 1,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "name": "Hololens MRC",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "visible": true
+                    }
+                ]
             },
             "sync": 0,
             "volume": 1.0
@@ -127,17 +133,128 @@
             "deinterlace_mode": 0,
             "enabled": true,
             "flags": 0,
-            "hotkeys": {},
-            "id": "image_source",
-            "mixers": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "libobs.unmute": []
+            },
+            "id": "ffmpeg_source",
+            "mixers": 15,
             "muted": false,
-            "name": "Grid",
+            "name": "Hololens MRC",
             "push-to-mute": false,
             "push-to-mute-delay": 0,
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "settings": {
-                "file": "/Users/dthompson/Library/Application Support/obs-studio/basic/assets/grid.jpg"
+                "advanced": false,
+                "clear_on_media_end": false,
+                "force_scale": false,
+                "input": "http://dt-tl:hololens@192.168.1.53/api/holographic/stream/live_high.mp4?holo=true&pv=true&mic=true&loopback=true",
+                "is_local_file": false,
+                "restart_on_activate": true
+            },
+            "sync": 0,
+            "volume": 1.0
+        },
+        {
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.hide_scene_item.Grid": [],
+                "libobs.hide_scene_item.Hololens MRC": [],
+                "libobs.hide_scene_item.c920": [],
+                "libobs.show_scene_item.Grid": [],
+                "libobs.show_scene_item.Hololens MRC": [],
+                "libobs.show_scene_item.c920": []
+            },
+            "id": "scene",
+            "mixers": 0,
+            "muted": false,
+            "name": "2. Inset WebCam",
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 1,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "name": "Grid",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "visible": false
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 1,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "name": "Hololens MRC",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "name": "c920",
+                        "pos": {
+                            "x": 1280.0,
+                            "y": 720.0
+                        },
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.34999999403953552,
+                            "y": 0.34999999403953552
+                        },
+                        "visible": true
+                    }
+                ]
             },
             "sync": 0,
             "volume": 1.0
@@ -248,98 +365,17 @@
             "deinterlace_mode": 0,
             "enabled": true,
             "flags": 0,
-            "hotkeys": {
-                "OBSBasic.SelectScene": [],
-                "libobs.hide_scene_item.Grid": [],
-                "libobs.hide_scene_item.Hololens MRC": [],
-                "libobs.hide_scene_item.c920": [],
-                "libobs.show_scene_item.Grid": [],
-                "libobs.show_scene_item.Hololens MRC": [],
-                "libobs.show_scene_item.c920": []
-            },
-            "id": "scene",
+            "hotkeys": {},
+            "id": "image_source",
             "mixers": 0,
             "muted": false,
-            "name": "2. Inset WebCam",
+            "name": "Grid",
             "push-to-mute": false,
             "push-to-mute-delay": 0,
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "settings": {
-                "items": [
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 1920.0,
-                            "y": 1080.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 1,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "name": "Grid",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "visible": false
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 1920.0,
-                            "y": 1080.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 1,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "name": "Hololens MRC",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "name": "c920",
-                        "pos": {
-                            "x": 1280.0,
-                            "y": 720.0
-                        },
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 0.35,
-                            "y": 0.35
-                        },
-                        "visible": true
-                    }
-                ]
+                "file": "/Users/dthompson/Library/Application Support/obs-studio/basic/assets/grid.jpg"
             },
             "sync": 0,
             "volume": 1.0
@@ -348,76 +384,41 @@
             "deinterlace_field_order": 0,
             "deinterlace_mode": 0,
             "enabled": true,
+            "filters": [
+                {
+                    "deinterlace_field_order": 0,
+                    "deinterlace_mode": 0,
+                    "enabled": true,
+                    "flags": 0,
+                    "hotkeys": {},
+                    "id": "async_delay_filter",
+                    "mixers": 0,
+                    "muted": false,
+                    "name": "Video Delay (Async)",
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "settings": {
+                        "delay_ms": 2000
+                    },
+                    "sync": 0,
+                    "volume": 1.0
+                }
+            ],
             "flags": 0,
-            "hotkeys": {
-                "libobs.mute": [],
-                "libobs.push-to-mute": [],
-                "libobs.push-to-talk": [],
-                "libobs.unmute": []
-            },
-            "id": "ffmpeg_source",
-            "mixers": 15,
-            "muted": false,
-            "name": "Hololens MRC",
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "advanced": true,
-                "clear_on_media_end": false,
-                "input": "http://dt-tl:hololens@192.168.1.53/api/holographic/stream/live_high.mp4?holo=true&pv=true&mic=true&loopback=true",
-                "is_local_file": false,
-                "restart_on_activate": true
-            },
-            "sync": 0,
-            "volume": 1.0
-        },
-        {
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {
-                "OBSBasic.SelectScene": [],
-                "libobs.hide_scene_item.Hololens Mixed Reality Capture": [],
-                "libobs.show_scene_item.Hololens Mixed Reality Capture": []
-            },
-            "id": "scene",
+            "hotkeys": {},
+            "id": "av_capture_input",
             "mixers": 0,
             "muted": false,
-            "name": "1. Just Hololens",
+            "name": "c920",
             "push-to-mute": false,
             "push-to-mute-delay": 0,
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "settings": {
-                "items": [
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 1920.0,
-                            "y": 1080.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 1,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "name": "Hololens MRC",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "visible": true
-                    }
-                ]
+                "device": "0x14200000046d082d",
+                "device_name": "HD Pro Webcam C920 #2"
             },
             "sync": 0,
             "volume": 1.0
